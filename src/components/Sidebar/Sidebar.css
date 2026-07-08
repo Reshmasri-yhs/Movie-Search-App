@@ -1,0 +1,35 @@
+.Sidebar {
+  background-color: #0d0d0d;
+  width: 240px;
+  flex-shrink: 0;
+  padding: 30px 0;
+  border-right: 1px solid #232323;
+}
+
+.Sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Sidebar li {
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9099b0;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.Sidebar li:hover {
+  background-color: rgba(255, 212, 0, 0.1);
+  color: #fff;
+  border-left-color: #FFD400;
+}
+
+.Sidebar li.active {
+  background-color: rgba(255, 212, 0, 0.15);
+  color: #fff;
+  border-left-color: #FFD400;
+}

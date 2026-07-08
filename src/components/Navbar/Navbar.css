@@ -1,0 +1,23 @@
+.navbar {
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1.5rem 0;
+  border-bottom: 0.5px solid #2a2a2a;
+}
+
+.navbar .logo {
+  color: #FFD400;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+}
+
+
+
+
+

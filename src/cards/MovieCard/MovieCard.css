@@ -1,0 +1,12 @@
+.movie-card {
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #101014;
+  color: #d6def4;
+}
+
+.movie-card h3 {
+  margin-top: 0;
+  color: #ffd400;
+}

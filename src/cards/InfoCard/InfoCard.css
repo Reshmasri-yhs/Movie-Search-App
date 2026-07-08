@@ -1,0 +1,16 @@
+.info-card {
+  padding: 18px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #111;
+  color: white;
+}
+
+.info-card h3 {
+  margin: 0 0 8px;
+  color: #ffd400;
+}
+
+.info-card p {
+  margin: 0;
+}
