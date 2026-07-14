@@ -11,10 +11,17 @@
   justify-content: center;
   padding: 32px;
 }
-.body{
+body {
+
     background:
-    linear-gradient(rgba(15,23,42,.92),rgba(15,23,42,.92)),
+    linear-gradient(
+        rgba(0,0,0,0.90),
+        rgba(0,0,0,0.90)
+    ),
     url("images/movie-bg.jpg") center/cover no-repeat fixed;
+
+    color:white;
+
 }
 
 .counter {

@@ -1,44 +1,40 @@
 import './App.css';
+import { Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Header from './components/Header/Header.jsx';
 import Sidebar from "./components/Sidebar/Sidebar.jsx"
 import Movies from "./components/Movies/Movies.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Login from './Pages/Login/login.jsx';
 import Register from './Pages/Registration/Register.jsx';
 import Home from "./Pages/Home/Home.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
-
+import MovieCard from  "./cards/MovieCard/MovieCard.jsx"
+import Layout from "./components/Layout/Layout.jsx";
+import NotFound from "./Pages/NotFound/NotFound.jsx";
 function App() {
-  const [selectedMenu, setSelectedMenu] = useState("Home");
-   
-  function renderContent() {
-    if (selectedMenu === "Home") {
-      return <Home />;
-    }
+  
+    return(
 
-    if (selectedMenu === "Movies") {
-      return <Movies />;
-    }
+  
+    <Routes>
 
-    if (selectedMenu === "Register") {
-      return <Register />;
-    }
+    <Route path="/" element={<Layout />}>
 
-    return <Dashboard title={selectedMenu} />;
-  }
+    <Route index element={<Home />} />
 
-  return (
-    <div className="App">
-      <Navbar/>
-      <Header/>
-      <div className = "main">
-        <Sidebar selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu}/>
-        <main className="content-area">{renderContent()}</main>
+    <Route path="login" element={<Login />} />
 
-        </div>
-         <Footer />
-      </div>
-    
-  )
-};
+    <Route path="register" element={<Register />} />
+
+    <Route path="movies" element={<Movies />} />
+
+    <Route path="dashboard" element={<Dashboard />} />
+    <Route path="*" element={<NotFound />} />
+    </Route>
+    </Routes>
+    );
+
+}
 export default App;

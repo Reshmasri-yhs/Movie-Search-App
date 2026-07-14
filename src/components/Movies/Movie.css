@@ -1,13 +1,13 @@
-.movie-card {
-  padding: 20px;
-  border: 1px solid #333;
-  border-radius: 8px;
-  background-color: #101014;
-  color: #d6def4;
-}
+.Movie-content {
 
-.movie-card h3 {
-  margin-top: 0;
-  color: #ffd400;
-}
+    display:flex;
 
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    padding:30px;
+
+    background:#050505;
+
+}

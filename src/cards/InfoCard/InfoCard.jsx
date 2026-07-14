@@ -1,11 +1,18 @@
 import "./InfoCard.css";
 
-function InfoCard({ title, value }) {
+function InfoCard({ title, value, icon, onClick }) {
+  const Wrapper = onClick ? "button" : "div";
+
   return (
-    <div className="info-card">
+    <Wrapper
+      className={`info-card ${onClick ? "clickable" : ""}`}
+      onClick={onClick}
+      type={onClick ? "button" : undefined}
+    >
+      {icon && <span className="info-icon">{icon}</span>}
       <h3>{title}</h3>
-      <p>{value}</p>
-    </div>
+      <p>{value ?? "N/A"}</p>
+    </Wrapper>
   );
 }
 

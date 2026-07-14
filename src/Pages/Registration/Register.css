@@ -39,3 +39,16 @@
     font-size: 28px;
     margin-bottom: 10px;
 }
+.error {
+  color: red;
+  font-size: 14px;
+  margin: 2px 0 8px;
+}
+
+.user-details {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #777;
+  border-radius: 6px;
+  text-align: left;
+}

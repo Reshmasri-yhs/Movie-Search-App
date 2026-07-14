@@ -1,19 +1,38 @@
 import "./Dashboard.css";
 import InfoCard from "../../cards/InfoCard/InfoCard.jsx";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Dashboard({ title }) {
+function Dashboard() {
+  const navigate=useNavigate();
+
+  function logout(){
+  localStorage.removeItem("loggedUser");
+   navigate("/login");
+  }
+
+   function goHome() {
+    navigate("/");
+  }
+
   return (
-    <div className="dashboard">
-      <h2>{title}</h2>
+    <div className="dashboard-page">
+      <h2>Welcome Back !!!</h2>
 
-      <div className="dashboard-grid">
-        <InfoCard title="Movies" value="Browse movie collections" />
-        <InfoCard title="Reviews" value="Read and share reviews" />
-        <InfoCard title="Watchlist" value="Save movies for later" />
-        <InfoCard title="Community" value="Connect with movie fans" />
+      <div className="dashboard-actions">
+        <button className="btn-primary" onClick={goHome}>
+          Go to Home
+        </button>
+
+        <button className="logout-btn" onClick={logout}>
+          Logout
+        </button>
       </div>
-    </div>
-  );
+      </div>
+
+
+);
+
 }
 
 export default Dashboard;
