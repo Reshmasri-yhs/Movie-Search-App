@@ -88,10 +88,16 @@ npm run dev
 ## 📸 Preview
 
 A sleek entertainment platform with a cinematic dark interface and responsive design for discovering movies, TV shows, anime, and more.
+![Uploading Screenshot 2026-07-15 224449.png…]()
+![Uploading Screenshot 2026-07-15 223624.png…]()
+![Uploading Screenshot 2026-07-15 223602.png…]()
+![Uploading Screenshot 2026-07-15 223551.png…]()
+![Uploading Screenshot 2026-07-15 223532.png…]()
+
 
 ## 👩‍💻 Author
 
-**Reshma Shankar**
+**Reshma Sri**
 
 ---
 
