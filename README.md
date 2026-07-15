@@ -1,21 +1,98 @@
-# React + Vite
+# 🎬 Screen Scoop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Screen Scoop is a modern movie discovery web application built with **React** and **Vite**. It provides users with an attractive interface to explore movies, TV shows, anime, celebrities, and trending entertainment content. The application is designed with a responsive layout, reusable components, and smooth navigation to deliver a clean and engaging user experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 🏠 Modern Home Dashboard
+* 🎥 Browse Movies
+* 📺 Explore TV Shows
+* 🔥 Trending Movies & Shows
+* ⭐ Top Rated Collection
+* ❤️ Favorites Section
+* 📜 Watch History
+* 🎭 Anime Collection
+* 👥 Celebrity Profiles
+* 🗂️ Genre-Based Browsing
+* 📅 Upcoming Movies (2026–2027)
+* ⚙️ Settings Page
+* 🔐 Login & Registration Pages
+* 📱 Responsive Sidebar Navigation
+* 🎨 Dark Theme with Yellow Accent UI
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* React Router DOM
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* React Icons
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-<img width="1920" height="1200" alt="Screenshot 2026-07-14 225601" src="https://github.com/user-attachments/assets/a020c34c-cf77-4f26-96b3-257352c5cb7d" />
-<img width="1920" height="1200" alt="Screenshot 2026-07-14 225141" src="https://github.com/user-attachments/assets/19541ea2-3d1b-4079-bd72-dbd5132cae9f" />
-<img width="1920" height="1200" alt="Screenshot 2026-07-14 225107" src="https://github.com/user-attachments/assets/049a9fc2-8a55-43e9-a49f-37c05611b135" />
-<img width="1920" height="1200" alt="Screenshot 2026-07-14 225056" src="https://github.com/user-attachments/assets/024931e0-89af-4c07-bd34-673d86ffbd44" />
-<img width="1920" height="1200" alt="Screenshot 2026-07-14 225040" src="https://github.com/user-attachments/assets/255bf330-35a0-4ed1-9811-e50b6818d474" />
+```text
+src/
+├── components/
+│   ├── Navbar/
+│   ├── Sidebar/
+│   ├── Footer/
+│   ├── MovieCard/
+│   └── ...
+├── Pages/
+│   ├── Home/
+│   ├── Movies/
+│   ├── TVShows/
+│   ├── Trending/
+│   ├── TopRated/
+│   ├── Anime/
+│   ├── Favorites/
+│   ├── History/
+│   ├── Genres/
+│   ├── Celebs/
+│   ├── Upcoming/
+│   ├── Settings/
+│   ├── Login/
+│   └── Register/
+└── App.jsx
+```
+
+## 🚀 Getting Started
+
+1. Clone the repository.
+2. Install dependencies.
+
+```bash
+npm install
+```
+
+3. Start the development server.
+
+```bash
+npm run dev
+```
+
+4. Open your browser and visit the local development URL displayed in the terminal.
+
+## 🎯 Future Enhancements
+
+* Movie search using TMDB API
+* User authentication
+* Reviews and ratings
+* Watchlist synchronization
+* Dark/Light theme toggle
+* Backend integration with MongoDB and Express
+* Personalized movie recommendations
+
+## 📸 Preview
+
+A sleek entertainment platform with a cinematic dark interface and responsive design for discovering movies, TV shows, anime, and more.
+
+## 👩‍💻 Author
+
+**Reshma Shankar**
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!
