@@ -1,7 +1,12 @@
-.home-page {
-  background-color: #0d0d0d;
-  color: #e0e0e0;
-  padding: 40px 24px 80px;
+.home-page{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(10,10,10,.82),rgba(10,10,10,.88)),
+    url("posters/theatre.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 
 /* Hero Section */
@@ -81,4 +86,53 @@
   margin: 0 auto;
 }
 
-.features-section h3 {
+/* Quick Browse Section */
+
+.browse-section{
+  margin:60px auto;
+  padding:30px;
+  text-align:center;
+  background:rgba(20,20,20,0.85);
+  border:2px solid #f5c518;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(245,197,24,.2);
+}
+
+.browse-section h3{
+  font-size:32px;
+  color:#f5c518;
+  margin-bottom:25px;
+  letter-spacing:1px;
+}
+
+.browse-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.browse-btn{
+  min-width:160px;
+  padding:14px 28px;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:600;
+  color:#fff;
+  background:#1e1e1e;
+  border:2px solid #f5c518;
+  border-radius:50px;
+  transition:all .3s ease;
+}
+
+.browse-btn:hover{
+  background:#f5c518;
+  color:#111;
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 8px 20px rgba(245,197,24,.5);
+}
+
+.browse-btn:active{
+  transform:scale(.98);
+}
