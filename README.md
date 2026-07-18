@@ -1,26 +1,26 @@
-# 🎬 Screen Scoop
+#  Screen Scoop
 
 Screen Scoop is a modern movie discovery web application built with **React** and **Vite**. It provides users with an attractive interface to explore movies, TV shows, anime, celebrities, and trending entertainment content. The application is designed with a responsive layout, reusable components, and smooth navigation to deliver a clean and engaging user experience.
 
-## ✨ Features
+##  Features
 
-* 🏠 Modern Home Dashboard
-* 🎥 Browse Movies
-* 📺 Explore TV Shows
-* 🔥 Trending Movies & Shows
-* ⭐ Top Rated Collection
-* ❤️ Favorites Section
-* 📜 Watch History
-* 🎭 Anime Collection
-* 👥 Celebrity Profiles
-* 🗂️ Genre-Based Browsing
-* 📅 Upcoming Movies (2026–2027)
-* ⚙️ Settings Page
-* 🔐 Login & Registration Pages
-* 📱 Responsive Sidebar Navigation
-* 🎨 Dark Theme with Yellow Accent UI
+*  Modern Home Dashboard
+*  Browse Movies
+*  Explore TV Shows
+*  Trending Movies & Shows
+*  Top Rated Collection
+*  Favorites Section
+*  Watch History
+*  Anime Collection
+*  Celebrity Profiles
+*  Genre-Based Browsing
+*  Upcoming Movies (2026–2027)
+*  Settings Page
+*  Login & Registration Pages
+*  Responsive Sidebar Navigation
+*  Dark Theme with Yellow Accent UI
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * React
 * Vite
@@ -30,7 +30,7 @@ Screen Scoop is a modern movie discovery web application built with **React** an
 * CSS3
 * React Icons
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 src/
@@ -58,7 +58,7 @@ src/
 └── App.jsx
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. Clone the repository.
 2. Install dependencies.
@@ -75,7 +75,7 @@ npm run dev
 
 4. Open your browser and visit the local development URL displayed in the terminal.
 
-## 🎯 Future Enhancements
+##  Future Enhancements
 
 * Movie search using TMDB API
 * User authentication
@@ -95,10 +95,10 @@ A sleek entertainment platform with a cinematic dark interface and responsive de
 ![Uploading Screenshot 2026-07-15 223532.png…]()
 
 
-## 👩‍💻 Author
+##  Author
 
 **Reshma Sri**
 
 ---
 
-⭐ If you like this project, consider giving it a star on GitHub!
+ If you like this project, consider giving it a star on GitHub!
