@@ -1,70 +1,82 @@
 import { useNavigate } from "react-router-dom";
 import "./MovieCard.css";
 
+function MovieCard({ movie, editMovie, deleteMovie, toggleFavorite }){
 
-function MovieCard({ movie }) {
-  
-   const navigate = useNavigate();
+const navigate=useNavigate();
 
-  return (
-    <div className="movie-card">
-      <div className="movie-poster">
-        <img
-          src={movie.poster}
-          alt={movie.title}
-          onError={(e) => {
-            e.currentTarget.onerror = null;
-            e.currentTarget.src = FALLBACK_POSTER;
-          }}
-        />
-       
-      </div>
+const FALLBACK_POSTER=
+"/no-poster.png";
 
-      <div className="movie-info">
-        <h3>{movie.title}</h3>
-        <span className="genre-tag">{movie.genre}</span>
+return(
 
-        <div className="movie-meta">
-          <span>
-            {movie.year}
+<div className="movie-card">
 
-          </span>
-          <span>
-            {movie.rating}/10
+<div className="movie-poster">
 
-          </span>
-        </div>
+<img
+src={
+movie.poster?.startsWith("http")
+?movie.poster
+:FALLBACK_POSTER
+}
+alt={movie.title}
+onError={(e)=>e.currentTarget.src=FALLBACK_POSTER}
+/>
 
-        <div
-         className="movie-director">
-          <span>
-             Director:
+<span className="rating">
+⭐ {movie.rating}/10
+</span>
 
-          </span>
-          <div 
-          className="director-row">
-            <p>
-              {movie.director}
-              </p>
-             <p>
-              Watch on: {movie.platform}
-            </p>
-            <p>
-              Review: {movie.review}
-              </p>
-              <p>
-             Languages: {movie.language}
-              </p>
-            </div>
-            <button className="play-btn"
-             onClick={() => navigate(`/movies/${movie.id}`)}>
-              View details
-            </button>
-          </div>
-        </div>
-      </div>
-    
-  );
+</div>
+
+<div className="movie-info">
+
+<h3>{movie.title}</h3>
+
+<div className="movie-tags">
+
+<span>{movie.genre}</span>
+
+<span>{movie.language}</span>
+
+<span>{movie.year}</span>
+
+</div>
+
+<div className="card-buttons">
+
+{
+toggleFavorite &&
+
+<button
+className="favorite-btn"
+onClick={()=>toggleFavorite(movie)}
+>
+{movie.favorite?"♥ Favorited":"♡ Favorite"}
+</button>
+
+}
+
+
+<button
+className="details-btn"
+onClick={()=>navigate(`/movies/${movie._id}`)}
+>
+Details
+</button>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+);
+
 }
 
 export default MovieCard;
