@@ -2,10 +2,12 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from 'react';
-import Movies from "./components/Movies/Movies.jsx";
 
+import Movies from "./components/Movies/Movies.jsx";
+import AuthLayout from "./components/AuthLayout/AuthLayout.jsx";
 import Login from './Pages/Login/login.jsx';
 import Register from './Pages/Registration/Register.jsx';
+import Profile from "./Pages/Profile/Profile.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 import FavoritesTable from "./components/FavoritesTable/FavoritesTable.jsx";
@@ -24,6 +26,9 @@ import Anime from "./Pages/Sidebarsets/Anime.jsx";
 import Celebs from './Pages/Sidebarsets/Celebs.jsx';
 import MoviesAPI from "./Pages/MoviesAPI/MoviesAPI.jsx";
 import MovieDetails from "./Pages/MovieDetails/MovieDetails.jsx";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.jsx";
+import AddMovie from "./components/Admin/AddMovie";
+
 function App() {
       const [loggedUser,setLoggedUser]=useState(null);
        useEffect(()=>{
@@ -35,29 +40,91 @@ function App() {
         },[]);
     return(
     <Routes>
-    <Route path="/" element={<Layout />}>
-    <Route index element={<Home />} />
-    
+
+
+  {/* Login/Register Layout */}
+
+  <Route element={<AuthLayout />}>
+
     <Route path="login" element={<Login />} />
+
     <Route path="register" element={<Register />} />
-    <Route path="movies" element={<Movies />} />
-    <Route path="movies-api" element={<MoviesAPI/>}/>
-    <Route path="movie/:id" element={<MovieDetails/>}/>
-    <Route path="dashboard" element={<Dashboard />} />
-     <Route path="favorites-table" element={<FavoritesTable />} />
-    <Route path="trending" element={<Trending />} />
-    <Route path="toprated" element={<Toprated />} />
-    <Route path="upcoming" element={<Upcoming />} />
-    <Route path="genres" element={<Genres />} />
-    <Route path="favorites" element={<Favorites />} />
-    <Route path="history" element={<History />} />
-    <Route path="settings" element={<Settings />} />
-    <Route path="logout" element={<Logout />} />
-     <Route path="tvshows" element={<TVShows />} />
-     <Route path="anime" element={<Anime />} />
-     <Route path="celebs" element={<Celebs/>}/>
-    <Route path="*" element={<NotFound />} />
+
   </Route>
+
+
+
+  {/* Main Website Layout */}
+
+  <Route path="/" element={<Layout />}>
+
+    <Route index element={<Home />} />
+
+    <Route path="profile" element={<Profile />} />
+     
+     <Route path="/admin/add-movie"element={<AddMovie/>}/>
+    <Route path="movies" element={
+      
+        <Movies />
+      
+    }/>
+
+    <Route path="movies-api" element={<MoviesAPI />} />
+
+    <Route path="movies/:id" element={<MovieDetails />} />
+
+    <Route path="dashboard" element={
+      
+        <Dashboard />
+      
+    }/>
+
+    <Route path="trending" element={<Trending />} />
+
+    <Route path="toprated" element={<Toprated />} />
+
+    <Route path="upcoming" element={<Upcoming />} />
+
+    <Route path="genres" element={<Genres />} />
+
+    <Route path="favorites" element={
+      <ProtectedRoute>
+        <Favorites />
+      </ProtectedRoute>
+    }/>
+
+    <Route path="favorites-table" element={
+      <ProtectedRoute>
+        <FavoritesTable />
+      </ProtectedRoute>
+    }/>
+
+    <Route path="history" element={
+      <ProtectedRoute>
+        <History />
+      </ProtectedRoute>
+    }/>
+
+    <Route path="settings" element={
+      <ProtectedRoute>
+        <Settings />
+      </ProtectedRoute>
+    }/>
+
+    <Route path="logout" element={<Logout />} />
+
+    <Route path="tvshows" element={<TVShows />} />
+
+    <Route path="anime" element={<Anime />} />
+
+    <Route path="celebs" element={<Celebs />} />
+
+
+    <Route path="*" element={<NotFound />} />
+
+  </Route>
+
+
 </Routes>
   
     
