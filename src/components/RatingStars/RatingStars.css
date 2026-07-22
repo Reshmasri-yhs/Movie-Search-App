@@ -1,0 +1,22 @@
+.rating-stars{
+
+display:flex;
+gap:5px;
+font-size:25px;
+color:#f5c518;
+
+}
+
+
+.rating-stars span{
+
+transition:.3s;
+
+}
+
+
+.rating-stars span:hover{
+
+transform:scale(1.2);
+
+}
